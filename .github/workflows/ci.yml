@@ -1,0 +1,52 @@
+name: TP2 - Runtime Security Gate
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  runtime-gate:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Récupération du code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Installation de Python (Nécessaire pour log_metrics.py)
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # 3. Démarrage de l'environnement Staging
+      - name: Start Staging Environment
+        run: docker compose -f compose.staging.yml up -d --build
+
+      # 4. Petite pause pour laisser le temps à Flask de démarrer
+      - name: Wait for service
+        run: sleep 10
+
+      # 5. Exécution de la Gate (Le cœur du TP2)
+      - name: Run Log Gate
+        run: |
+          chmod +x monitoring/*.sh
+          bash monitoring/log_gate.sh
+        env:
+          # On cible le port 5001 car c'est celui exposé dans ton compose.staging.yml
+          BASE_URL: http://localhost:5001
+          SERVICE: catalog
+          # Seuils stricts pour la CI
+          MAX_5XX: 0
+          MAX_TRAV: 0
+          MAX_CMD: 0
+
+      # 6. Sauvegarde des rapports (Artefacts)
+      # 'if: always()' assure que les rapports sont sauvés même si la gate échoue (rouge)
+      - name: Upload Security Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: runtime-reports
+          path: reports/
