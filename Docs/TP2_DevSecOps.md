@@ -13,11 +13,11 @@ Nous avons mis en place un environnement minimaliste pour servir de base au moni
 Le service expose une route `/health` fonctionnelle.
 
 **Preuve de fonctionnement :**
-```bash
+bash
 $ curl -i http://localhost:5001/health
 HTTP/1.1 200 OK
 ...
-{"status":"ok"}```
+{"status":"ok"}
 
 (curl.exe -i http://localhost:5001/health sur windows)
 
