@@ -17,7 +17,7 @@ Le service expose une route `/health` fonctionnelle.
 $ curl -i http://localhost:5001/health
 HTTP/1.1 200 OK
 ...
-{"status":"ok"}
+{"status":"ok"}```
 
 (curl.exe -i http://localhost:5001/health sur windows)
 
