@@ -1,0 +1,10 @@
+services:
+  catalog:
+    build: ./services/catalog
+    ports:
+      - "5001:5000"  # On expose sur le port 5001 comme dans l'exemple du sujet
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
