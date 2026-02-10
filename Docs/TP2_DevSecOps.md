@@ -133,3 +133,46 @@ Nous forçons le mode "suspect" pour simuler des tentatives de **Path Traversal*
     ```
 
 Cette validation prouve que notre chaîne de surveillance est capable de détecter et bloquer une version vulnérable de l'application en environnement de staging.
+
+
+## Partie F : Intégration Continue (CI/CD)
+
+Pour garantir que les contrôles de sécurité et de performance sont effectués systématiquement à chaque modification du code, nous avons intégré la Gate Runtime dans notre pipeline GitHub Actions.
+
+### 1. Objectif
+L'objectif est d'exécuter le script `monitoring/log_gate.sh` automatiquement après le déploiement en environnement de staging. [cite_start]Si la gate échoue (attaques détectées ou erreurs), le pipeline doit s'arrêter et fournir les logs pour analyse [cite: 232-233].
+
+### 2. Configuration du Pipeline (`.github/workflows/ci.yml`)
+Nous avons créé un workflow GitHub Actions qui orchestre le déploiement et la vérification.
+
+**Extrait de la configuration :**
+
+```yaml
+jobs:
+  runtime-gate:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Démarrage de l'environnement Staging
+      - name: Start Staging Environment
+        run: docker compose -f compose.staging.yml up -d --build
+
+      # 2. Exécution de la Gate (Script d'orchestration)
+      - name: Run Log Gate
+        run: |
+          chmod +x monitoring/*.sh
+          bash monitoring/log_gate.sh
+        env:
+          BASE_URL: http://localhost:5001
+          SERVICE: catalog
+          # Seuils stricts : aucune attaque tolérée
+          MAX_5XX: 0
+          MAX_TRAV: 0
+          MAX_CMD: 0
+
+      # 3. Sauvegarde des rapports (Artefacts)
+      - name: Upload Security Reports
+        if: always() # S'exécute même si la gate échoue
+        uses: actions/upload-artifact@v4
+        with:
+          name: runtime-reports
+          path: reports/
