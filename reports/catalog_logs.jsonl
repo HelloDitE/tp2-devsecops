@@ -1,0 +1,76 @@
+{"ts": "2026-02-10T10:45:09Z", "level": "INFO", "service": "catalog", "request_id": "b3952085-e32d-4db7-933f-35f00d43add7", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:09] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:09Z", "level": "INFO", "service": "catalog", "request_id": "f7a2072c-ec6f-4110-b2be-1ffe27979d48", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:09] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:10Z", "level": "INFO", "service": "catalog", "request_id": "3e48f082-20dd-48ab-a9c6-4fcd7e9c7c55", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:10] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:11Z", "level": "INFO", "service": "catalog", "request_id": "38011f15-2cd3-4d3d-90e5-f715ff66203a", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:11] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:12Z", "level": "INFO", "service": "catalog", "request_id": "f3a7d2ee-4d91-47b5-86a5-64b019032a40", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:12] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:13Z", "level": "INFO", "service": "catalog", "request_id": "aec2b284-bdad-4db3-8819-ff45f8018102", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:13] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "ab1e18ab-b20c-4fd6-8026-3c251abef615", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "6c089844-c6d8-497e-b4c0-4c9c14e207b4", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "2b8788b9-97f3-4254-837d-5c217a02ed7c", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "14e23391-1729-4e94-959e-1842c1bb8207", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "8093fae4-6c36-49f7-bbd8-6948e0ea3bda", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "450cff1e-cc09-469b-bbe0-300135a22a19", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "22fe6311-0c5e-42c3-b533-88626fbf77c0", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "d05b476a-ceaa-418e-9754-7ad4023d9f72", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "c9748ef4-11b1-4747-bb5c-66c6cda3f463", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "2b24884f-f7cc-46cc-a71e-2bfd55aa85ea", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "d8876a88-182a-44cc-a433-d290a594c4a6", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "6e5f789b-cf67-4c82-95a8-f062e727ae54", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "2f199a91-b570-4c49-b0a5-8669ece0f7c7", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "ce2c1f78-2940-424a-959c-65d1d2af8d74", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "1938d8fd-3f4e-4534-b76b-ef99434442ae", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "2cb6e14e-84a5-446d-a9a2-3fcbecc5ccff", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "990d5b23-7f02-4fd3-a872-73ff1ee59492", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "1c2b40f7-7623-4b00-9d53-7cd232553c67", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "0a68fade-7339-4839-af4c-e27f3b4eb926", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "9cebe2c4-296f-49bf-876b-14bace3a5d55", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "625d6f77-65bd-4020-b899-bbfb42750093", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "c31cb79d-5cdb-4c5f-ab91-e8faf2bf6a34", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "a500f36b-eec4-4af7-bb54-41d983e95e47", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "6fabbdf2-fe83-49ce-b16f-1867e7365233", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "9b673d90-9592-4939-aae5-e01141a470aa", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "49b7ac3f-fa6c-4115-9064-eaea51fb4a89", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "9552b9e5-bb1a-4050-9286-b58342b1fc62", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "e0a569e8-fd4d-4a8d-ac72-e7d0644858f2", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "cc5cbd68-e615-4252-a5ff-9574a53e2693", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:14Z", "level": "INFO", "service": "catalog", "request_id": "c08574d4-6a4b-49f7-8e71-919d1b505e4f", "method": "GET", "path": "/health", "status": 200, "latency_ms": 0, "query": ""}
+172.22.0.1 - - [10/Feb/2026 10:45:14] "GET /health HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:15Z", "level": "INFO", "service": "catalog", "request_id": "73183b0a-9d57-4183-a5f1-1ec0c89a3117", "method": "GET", "path": "/search", "status": 200, "latency_ms": 0, "query": "q=abc"}
+172.22.0.1 - - [10/Feb/2026 10:45:15] "GET /search?q=abc HTTP/1.1" 200 -
+{"ts": "2026-02-10T10:45:15Z", "level": "INFO", "service": "catalog", "request_id": "343f2c20-fe83-46e6-8195-886b11ed9ed6", "method": "GET", "path": "/search", "status": 200, "latency_ms": 0, "query": "q=test"}
+172.22.0.1 - - [10/Feb/2026 10:45:15] "GET /search?q=test HTTP/1.1" 200 -
