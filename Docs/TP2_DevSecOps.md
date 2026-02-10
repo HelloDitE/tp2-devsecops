@@ -13,14 +13,14 @@ Nous avons mis en place un environnement minimaliste pour servir de base au moni
 Le service expose une route `/health` fonctionnelle.
 
 **Preuve de fonctionnement :**
-bash
+```bash
 $ curl -i http://localhost:5001/health
 HTTP/1.1 200 OK
 ...
 {"status":"ok"}
 
 (curl.exe -i http://localhost:5001/health sur windows)
-
+```
 
 ## Partie B : Logs Structurés (JSON)
 
@@ -48,6 +48,7 @@ Les logs du conteneur sont maintenant lisibles par une machine.
   "latency_ms": 1,
   "query": ""
 }
+```
 
 
 ## Partie C : Générateur de Trafic
