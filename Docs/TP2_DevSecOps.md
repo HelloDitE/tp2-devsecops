@@ -57,7 +57,7 @@ Pour alimenter les logs et tester nos détecteurs en conditions réelles, nous a
 
 ### 1. Script (`monitoring/traffic.sh`)
 Ce script Bash permet de simuler deux types d'activité sur l'application :
-* [cite_start]**Trafic Normal :** Une boucle de requêtes sur `/health` et `/search` pour simuler une utilisation légitime [cite: 318-321].
+* **Trafic Normal :** Une boucle de requêtes sur `/health` et `/search` pour simuler une utilisation légitime [cite: 318-321].
 * **Trafic Suspect (Attaques) :** Activé via la variable d'environnement `SUSPECT_MODE=1`. Il envoie des requêtes malveillantes contenant des tentatives de **Path Traversal** (`../../etc/passwd`) et d'**Injection de Commande** (`cmd=id`) [cite: 324-328].
 
 ### 2. Validation
@@ -77,7 +77,7 @@ SUSPECT_MODE=1 bash monitoring/traffic.sh
 Nous avons développé un script Python pour analyser les logs JSON et en extraire des indicateurs de sécurité et de performance.
 
 ### 1. Script d'analyse (`monitoring/log_metrics.py`)
-[cite_start]Ce script lit le fichier de logs ligne par ligne et génère un rapport JSON contenant [cite: 366-373] :
+Ce script lit le fichier de logs ligne par ligne et génère un rapport JSON contenant [cite: 366-373] :
 * **`count_5xx`** : Nombre d'erreurs serveur (Codes HTTP 500+).
 * **`p95_latency_ms`** : La latence en millisecondes en dessous de laquelle se trouvent 95% des requêtes (indicateur de performance critique).
 * **`patterns`** : Détection de tentatives d'intrusion via Regex :
@@ -96,17 +96,17 @@ Nous avons simulé une extraction de logs depuis l'environnement de staging pour
 
 ## Partie E : La Gate Runtime (Le Gardien)
 
-Nous avons assemblé tous les composants (Smoke tests, Trafic, Logs, Métriques) dans un script d'orchestration unique : `monitoring/log_gate.sh`. [cite_start]Ce script sert de "barrière de qualité et de sécurité" automatisée [cite: 164-165].
+Nous avons assemblé tous les composants (Smoke tests, Trafic, Logs, Métriques) dans un script d'orchestration unique : `monitoring/log_gate.sh`. Ce script sert de "barrière de qualité et de sécurité" automatisée [cite: 164-165].
 
 ### 1. Fonctionnement du script (`monitoring/log_gate.sh`)
-[cite_start]Le script automatise la validation post-déploiement en 5 étapes séquentielles [cite: 166-172] :
+Le script automatise la validation post-déploiement en 5 étapes séquentielles [cite: 166-172] :
 
 1.  **Santé :** Vérifie que le service est vivant (`smoke.sh`) et stable (`supervision.sh`).
 2.  **Simulation :** Génère du trafic via `traffic.sh`. Nous avons modifié ce script pour qu'il accepte le mode suspect en argument pour plus de robustesse.
 3.  **Extraction :** Récupère les logs JSON du conteneur.
-    * [cite_start]*Note importante :* Nous utilisons un timestamp (`START_TS`) et l'option `--since` pour n'analyser que les logs générés **durant** le test, ignorant ainsi l'historique précédent[cite: 183].
+    * *Note importante :* Nous utilisons un timestamp (`START_TS`) et l'option `--since` pour n'analyser que les logs générés **durant** le test, ignorant ainsi l'historique précédent[cite: 183].
 4.  **Analyse :** Calcule les métriques de sécurité et performance via `log_metrics.py`.
-5.  [cite_start]**Décision (Gate) :** Compare les résultats aux seuils définis (0 attaque autorisée) et décide du succès ou de l'échec du pipeline [cite: 204-213].
+5.  **Décision (Gate) :** Compare les résultats aux seuils définis (0 attaque autorisée) et décide du succès ou de l'échec du pipeline [cite: 204-213].
 
 ### 2. Validation des Scénarios
 
@@ -140,7 +140,7 @@ Cette validation prouve que notre chaîne de surveillance est capable de détect
 Pour garantir que les contrôles de sécurité et de performance sont effectués systématiquement à chaque modification du code, nous avons intégré la Gate Runtime dans notre pipeline GitHub Actions.
 
 ### 1. Objectif
-L'objectif est d'exécuter le script `monitoring/log_gate.sh` automatiquement après le déploiement en environnement de staging. [cite_start]Si la gate échoue (attaques détectées ou erreurs), le pipeline doit s'arrêter et fournir les logs pour analyse [cite: 232-233].
+L'objectif est d'exécuter le script `monitoring/log_gate.sh` automatiquement après le déploiement en environnement de staging. Si la gate échoue (attaques détectées ou erreurs), le pipeline doit s'arrêter et fournir les logs pour analyse [cite: 232-233].
 
 ### 2. Configuration du Pipeline (`.github/workflows/ci.yml`)
 Nous avons créé un workflow GitHub Actions qui orchestre le déploiement et la vérification.
