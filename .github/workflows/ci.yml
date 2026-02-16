@@ -2,9 +2,9 @@ name: TP2 - Runtime Security Gate
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: [ "main", "master", "demo-fail-gate" ]
   pull_request:
-    branches: [ "main", "master" ]
+    branches: [ "main", "master", "demo-fail-gate" ]
 
 jobs:
   runtime-gate:
