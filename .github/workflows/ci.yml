@@ -28,13 +28,13 @@ jobs:
       - name: Wait for service
         run: sleep 10
 
-      # 5. Exécution de la Gate (Le cœur du TP2)
+      # 5. Exécution de la Gate
       - name: Run Log Gate
         run: |
           chmod +x monitoring/*.sh
           bash monitoring/log_gate.sh
         env:
-          # On cible le port 5001 car c'est celui exposé dans ton compose.staging.yml
+          # On cible le port 5001 car c'est celui exposé dans le compose.staging.yml
           BASE_URL: http://localhost:5001
           SERVICE: catalog
           # Seuils stricts pour la CI

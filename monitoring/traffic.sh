@@ -2,13 +2,12 @@
 set -euo pipefail
 BASE_URL="${BASE_URL:-http://localhost:5001}"
 
-# --- MODIFICATION MAJEURE ICI ---
 # On prend le 1er argument ($1) S'IL EXISTE, sinon on prend la variable, sinon 0
 MODE="${1:-${SUSPECT_MODE:-0}}"
 # --------------------------------
 
 echo "[traffic] Sending normal traffic to $BASE_URL..."
-echo "[traffic] DEBUG: Mode recu = $MODE"  # <--- On veut voir ça afficher 1
+echo "[traffic] DEBUG: Mode recu = $MODE"
 
 # 1. Trafic de fond
 for i in $(seq 1 30); do

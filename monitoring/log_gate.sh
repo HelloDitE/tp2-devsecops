@@ -36,9 +36,7 @@ BASE_URL="$BASE_URL" bash monitoring/smoke.sh >/dev/null
 BASE_URL="$BASE_URL" bash monitoring/supervision.sh >/dev/null
 
 echo "[gate] 2. Generation de trafic..."
-# --- MODIFICATION ICI : ON PASSE LA VARIABLE EN ARGUMENT ---
 BASE_URL="$BASE_URL" bash monitoring/traffic.sh "$SUSPECT_MODE"
-# -----------------------------------------------------------
 
 echo "[gate] 3. Logs..."
 docker compose -f "$COMPOSE_FILE" logs --since "$START_TS" --no-log-prefix "$SERVICE" > "reports/${SERVICE}_logs.jsonl"
@@ -65,7 +63,7 @@ if [ "$TRAV" -gt "$MAX_TRAV" ]; then FAIL=1; fi
 if [ "$CMD" -gt "$MAX_CMD" ]; then FAIL=1; fi
 
 if [ "$FAIL" -eq 1 ]; then
-    echo "[gate] ❌ GATE FAILED (C'est ce qu'on veut pour le test !)"
+    echo "[gate] ❌ GATE FAILED"
     exit 1
 else
     echo "[gate] ✅ GATE PASSED"

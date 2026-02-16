@@ -12,8 +12,7 @@ def p95(values):
 
 def main(path_in, path_out):
     logs = []
-    
-    # CORRECTION : On ouvre avec errors='ignore' pour ne pas planter sur les caractères bizarres
+
     try:
         with open(path_in, "r", encoding="utf-8", errors="ignore") as f:
             for line in f:
@@ -32,7 +31,6 @@ def main(path_in, path_out):
         print(f"Erreur: Le fichier {path_in} n'existe pas.")
         sys.exit(1)
 
-    # Le reste du script est identique
     valid_logs = [x for x in logs if isinstance(x, dict)]
     
     status_codes = [x.get("status") for x in valid_logs]

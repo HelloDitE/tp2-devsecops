@@ -49,7 +49,7 @@ def search():
 def debug_run():
     return jsonify({"output": "fake output"}), 200
 
-# Route MANQUANTE pour l'attaque Path Traversal
+# Route pour l'attaque Path Traversal
 @app.route('/report')
 def report():
     return jsonify({"content": "fake file content"}), 200
