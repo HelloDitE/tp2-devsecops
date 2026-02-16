@@ -37,6 +37,7 @@ jobs:
           # On cible le port 5001 car c'est celui exposé dans le compose.staging.yml
           BASE_URL: http://localhost:5001
           SERVICE: catalog
+          SUSPECT_MODE: 1
           # Seuils stricts pour la CI
           MAX_5XX: 0
           MAX_TRAV: 0
